@@ -1,13 +1,13 @@
-package com.example.myapplication;
+package com.aayush.signinapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aayush.signinapp.R;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,16 +22,13 @@ public class MainActivity extends AppCompatActivity {
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);
 
-        MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+        MaterialButton loginBtn = findViewById(R.id.loginBtn);
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
-                    Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this,"LOGIN FAILED", Toast.LENGTH_SHORT).show();
-                }
+        loginBtn.setOnClickListener(v -> {
+            if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+                Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this,"LOGIN FAILED", Toast.LENGTH_SHORT).show();
             }
         });
     }
