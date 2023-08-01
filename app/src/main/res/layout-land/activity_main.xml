@@ -1,0 +1,132 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signIn"
+        android:text="@string/sign_in"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+
+
+    <!-- Centered Parent LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:baselineAligned="false">
+
+        <!-- Form layout (left half) -->
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!-- Centered EditText -->
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                android:drawableTint="#000000"
+                android:hint="@string/username"
+                android:textColorHint="#000000"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="32sp"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="Enter Username" />
+
+            <!-- Centered EditText -->
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:autofillHints="Enter Password"
+                android:textColor="#000000"
+                android:drawableTint="#000000"
+                android:textColorHint="#000000"
+                android:textSize="32sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Centered MaterialButton -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Centered TextView -->
+            <TextView
+                android:id="@+id/forgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    <!-- Social Icons and Others layout (right half) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or_sign_in_with"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/socialIcons"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_google_black_24"
+                android:contentDescription="@string/google_icon" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook_black_24"
+                android:contentDescription="@string/facebook_icon" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitterx_black_24"
+                android:contentDescription="@string/x_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
